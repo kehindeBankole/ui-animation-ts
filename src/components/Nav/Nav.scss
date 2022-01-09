@@ -1,0 +1,12 @@
+@import '../../scss/index.scss';
+.nav-container{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    .logo{
+        width: 345px;
+        height: 156px;
+        background-color: #131313;
+    @include center-perfect
+    }
+}

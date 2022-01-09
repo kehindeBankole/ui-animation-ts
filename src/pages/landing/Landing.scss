@@ -1,0 +1,32 @@
+@import "../../scss/index.scss";
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: $left-bg;
+  .product {
+    position: fixed;
+    width: 37%;
+    object-fit: contain;
+    left: 40%;
+    bottom: -3%;
+    z-index: 99;
+  }
+  .light-side {
+    background-color: $left-bg;
+    width: 60%;
+  }
+  .dark-side {
+    width: 40%;
+    background-size: contain;
+    position: relative;
+    background: linear-gradient(
+        0deg,
+        rgba(19, 19, 19, 0.95),
+        rgba(19, 19, 19, 0.95)
+      ),
+      url("../../assets/Product.png");
+  }
+}
