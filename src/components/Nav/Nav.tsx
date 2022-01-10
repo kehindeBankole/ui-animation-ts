@@ -1,6 +1,7 @@
 import React, { CSSProperties } from "react";
 import "./Nav.scss";
 import logo from "../../assets/logo.png";
+import {ReactComponent as Bar} from '../../assets/hamburger.svg'
 function Nav() {
   const style:  CSSProperties  = {
     display:"flex"
@@ -14,7 +15,9 @@ function Nav() {
         <div className="search">
         </div>
       </div>
-      <div className="content"></div>
+      <div className="content">
+        <Bar style={{alignSelf:'center'}}/>
+      </div>
     </div>
   );
 }
