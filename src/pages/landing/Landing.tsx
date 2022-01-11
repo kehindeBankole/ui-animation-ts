@@ -2,17 +2,27 @@ import React from "react";
 import "./Landing.scss";
 import product from "../../assets/Product.png";
 import { ReactComponent as Star } from "../../assets/star.svg";
+import { ReactComponent as Cart } from "../../assets/cart.svg";
+import { motion } from "framer-motion";
 function Landing() {
   return (
     <div className="container">
       <img src={product} className="product" />
       <div className="light-side">
         <div className="content">
-          <h1>MAXTER 7.1 SURROUND</h1>
-          <div className="box"></div>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+          >
+            MAXTER 7.1 SURROUND
+          </motion.h1>
+          <motion.div className="box"   initial={{ width:'20px' }}
+           animate={{ width:'406px' }}
+            transition={{ ease: "easeOut", duration: 1,delay:0.5 }}></motion.div>
           <div className="stars">
             {Array.from({ length: 5 }, (v, i) => i).map((item, index) => (
-              <Star style={{alignSelf:"center"}}/>
+              <Star style={{ alignSelf: "center" }} />
             ))}
 
             <p>(11.893 Bewertungen)</p>
@@ -22,12 +32,17 @@ function Landing() {
             das MAXTER 7.1 Surround USB Gaming Headset für den PC macht es
             möglich.
           </p>
-          <p className="price">
-          79,99€
-          </p>
-          <p className="slash">
-          129,99€
-          </p>
+          <p className="price">79,99€</p>
+          <p className="slash">129,99€</p>
+          <div className="cart-section">
+            <div className="cart-box">
+              <Cart />
+              <div>jetzt kaufen</div>
+            </div>
+            <div className="add">
+              <button>1</button>
+            </div>
+          </div>
         </div>
       </div>
       <div className="dark-side">d</div>

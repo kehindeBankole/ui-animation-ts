@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   background-color: $left-bg;
-
   .product {
     position: fixed;
     width: 37%;
@@ -14,6 +13,20 @@
     left: 40%;
     bottom: -3%;
     z-index: 99;
+    animation: fly 3s infinite ease-in-out;
+    transition: ease-in-out;
+  
+  }
+  @keyframes fly {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
   .light-side {
     background-color: $left-bg;
@@ -22,6 +35,33 @@
     .content {
       margin-top: 225px;
       position: relative;
+
+      .cart-section{
+        display: flex;
+        gap: 10px;
+        button{
+          height: 57px;
+          width: 99px;
+          background-color: transparent;
+          border: 2px solid $dark-red;
+          color: $dark-red;
+          font-size: 19px;
+          font-weight: 700;
+        }
+        .cart-box{
+          background-color: $dark-red;
+          @include center-perfect;
+          width: 262px;
+          height: 57px;
+          gap: 10px;
+          div{
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+          }
+        }
+      }
       .stars{
         display: flex;
         p{
@@ -32,7 +72,7 @@
         }
       }
       .box{
-        width: 406px;
+       // width: 406px;
         height: 16px;
         background-color: $dark-red;
         top: 45px;
@@ -54,6 +94,7 @@
         color:$dark-red;
         font-size: 52px;
         font-weight: 900;
+        margin-top: -20px;
       }
       .slash{
         text-decoration: line-through;
