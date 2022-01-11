@@ -10,13 +10,13 @@ function Nav() {
     <div className="nav-container">
       <div style={{...style}}>
         <div className="logo">
-          <img src={logo} />
+          <img src={logo} width={135} height={46} />
         </div>
         <div className="search">
         </div>
       </div>
       <div className="content">
-        <Bar style={{alignSelf:'center'}}/>
+        <Bar style={{alignSelf:'center', width:50,height:50}}/>
       </div>
     </div>
   );
