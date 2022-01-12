@@ -2,6 +2,7 @@ import React from "react";
 import "./Landing.scss";
 import product from "../../assets/Product.png";
 import { ReactComponent as Star } from "../../assets/star.svg";
+import { ReactComponent as HalfStar } from "../../assets/halfstar.svg";
 import { ReactComponent as Cart } from "../../assets/cart.svg";
 import { motion } from "framer-motion";
 function Landing() {
@@ -22,7 +23,11 @@ function Landing() {
             transition={{ ease: "easeOut", duration: 1,delay:0.5 }}></motion.div>
           <div className="stars">
             {Array.from({ length: 5 }, (v, i) => i).map((item, index) => (
-              <Star style={{ alignSelf: "center" }} />
+              <motion.div initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.2 , delay:index}} onClick={()=>console.log(item)}>
+                
+             {index!==4?<Star style={{ alignSelf: "center" }} />:<HalfStar style={{ alignSelf: "center" }} />}   </motion.div>
             ))}
 
             <p>(11.893 Bewertungen)</p>
