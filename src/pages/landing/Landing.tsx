@@ -67,9 +67,11 @@ function Landing() {
         <div className="mics">
 {
   [1,2,3].map((elem , index)=>(
-  <div>
+  <motion.div     initial={{ x:500 }}
+  animate={{ x:0}}
+  transition={{ ease: "easeOut", duration: 0.2, delay: index}}>
       <img src={mic1}/>
-  </div>
+  </motion.div>
   ))
 }
         </div>
