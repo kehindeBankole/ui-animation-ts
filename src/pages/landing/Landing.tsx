@@ -5,6 +5,8 @@ import { ReactComponent as Star } from "../../assets/star.svg";
 import { ReactComponent as HalfStar } from "../../assets/halfstar.svg";
 import { ReactComponent as Cart } from "../../assets/cart.svg";
 import { motion } from "framer-motion";
+import mic1 from '../../assets/mic1.png'
+import mic2 from '../../assets/mic2.png'
 function Landing() {
   return (
     <div className="container">
@@ -18,16 +20,27 @@ function Landing() {
           >
             MAXTER 7.1 SURROUND
           </motion.h1>
-          <motion.div className="box"   initial={{ width:'20px' }}
-           animate={{ width:'406px' }}
-            transition={{ ease: "easeOut", duration: 1,delay:0.5 }}></motion.div>
+          <motion.div
+            className="box"
+            initial={{ width: "20px" }}
+            animate={{ width: "406px" }}
+            transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
+          ></motion.div>
           <div className="stars">
             {Array.from({ length: 5 }, (v, i) => i).map((item, index) => (
-              <motion.div initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ ease: "easeOut", duration: 0.2 , delay:index}} onClick={()=>console.log(item)}>
-                
-             {index!==4?<Star style={{ alignSelf: "center" }} />:<HalfStar style={{ alignSelf: "center" }} />}   </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 0.2, delay: index }}
+                onClick={() => console.log(item)}
+                style={{alignSelf:"center"}}
+              >
+                {index !== 4 ? (
+                  <Star style={{ alignSelf: "center" }} />
+                ) : (
+                  <HalfStar style={{ alignSelf: "center" }} />
+                )}{" "}
+              </motion.div>
             ))}
 
             <p>(11.893 Bewertungen)</p>
@@ -50,7 +63,17 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div className="dark-side">d</div>
+      <div className="dark-side">
+        <div className="mics">
+{
+  [1,2,3].map((elem , index)=>(
+  <div>
+      <img src={mic1}/>
+  </div>
+  ))
+}
+        </div>
+      </div>
     </div>
   );
 }

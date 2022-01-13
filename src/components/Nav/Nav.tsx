@@ -8,7 +8,7 @@ function Nav() {
     display:"flex"
   };
   return (
-    <div className="nav-container">
+    <div className="nav-container" data-testid="navbar">
       <div style={{...style}}>
         <div className="logo">
           <img src={logo} width={135} height={46} />

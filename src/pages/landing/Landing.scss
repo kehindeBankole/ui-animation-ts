@@ -15,7 +15,6 @@
     z-index: 99;
     animation: fly 3s infinite ease-in-out;
     transition: ease-in-out;
-  
   }
   @keyframes fly {
     0% {
@@ -36,10 +35,10 @@
       margin-top: 225px;
       position: relative;
 
-      .cart-section{
+      .cart-section {
         display: flex;
         gap: 10px;
-        button{
+        button {
           height: 57px;
           width: 99px;
           background-color: transparent;
@@ -48,13 +47,13 @@
           font-size: 19px;
           font-weight: 700;
         }
-        .cart-box{
+        .cart-box {
           background-color: $dark-red;
           @include center-perfect;
           width: 262px;
           height: 57px;
           gap: 10px;
-          div{
+          div {
             text-transform: uppercase;
             font-size: 17px;
             font-weight: 700;
@@ -62,17 +61,19 @@
           }
         }
       }
-      .stars{
+      .stars {
         display: flex;
-        p{
-          align-self: flex-start;
+        width: 300px;
+        p {
+          align-self: center;
           margin-left: 8px;
-          color:$grey;
+          color: $grey;
           font-size: 16px;
+
         }
       }
-      .box{
-       // width: 406px;
+      .box {
+        // width: 406px;
         height: 16px;
         background-color: $dark-red;
         top: 45px;
@@ -90,25 +91,32 @@
         color: white;
         width: 600px;
       }
-      .price{
-        color:$dark-red;
+      .price {
+        color: $dark-red;
         font-size: 52px;
         font-weight: 900;
         margin-top: -20px;
       }
-      .slash{
+      .slash {
         text-decoration: line-through;
-        color:#FFFFFF;
+        color: #ffffff;
         font-size: 22px;
         margin-top: -53px;
         font-weight: 600;
       }
     }
-
-   
   }
   .dark-side {
+    .mics {
+      float: right;
+      margin-top: 40%;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
     width: 40%;
+
     background-size: contain;
     position: relative;
     background: linear-gradient(
